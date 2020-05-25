@@ -42,6 +42,11 @@ def lane_finder(image, kernel_size, low, high, offset, x_width, ro, phi, thresho
     output = cv2.polylines(output, [vertices], True, (0, 255, 255), 4)
     #
     slope = (lines[:, :, 1] - lines[:, :, 3]) / (lines[:, :, 0] - lines[:, :, 2])
+    mask = np.logical_and(np.abs(slope) > .45, np.abs(slope) < .8)
+    mask = np.logical_and(mask, np.isfinite(slope))
+    mask = mask.flatten()
+
+    slope = slope[mask]
     intercept = lines[:, :, 1] - (slope * lines[:, :, 0])
     left_lane = slope > 0
     average_slope_left = np.average(slope[left_lane])
