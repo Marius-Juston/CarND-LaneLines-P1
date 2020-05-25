@@ -4,15 +4,15 @@ import numpy as np
 from P1 import canny, gaussian_blur, region_of_interest, grayscale, weighted_img, hough_lines
 
 kernel_size = 5
-low = 40
+low = 50
 high = 150
 offset = 55
-x_width = 85
-y_height = 320
+x_width = 150
+y_height = 330
 
 rho = 1  # distance resolution in pixels of the Hough grid
 theta = np.pi / 180  # angular resolution in radians of the Hough grid
-threshold = 30  # minimum number of votes (intersections in Hough grid cell)
+threshold = 40  # minimum number of votes (intersections in Hough grid cell)
 max_line_length = 35  # minimum number of pixels making up a line
 max_line_gap = 30  # maximum gap in pixels between connectable line segments
 
