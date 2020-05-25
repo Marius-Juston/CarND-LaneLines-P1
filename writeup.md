@@ -48,14 +48,9 @@ In the end I did not use the implemented draw_lines() function but rather used m
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
-
+One shortcoming of the pipeline is the orientation of the camera, if the camera is orientated too upwards or to the side, the lines might get filtered out either by teh angle threshold that I have implemented or by the region masking where the line is cut off
+Another shortcoming of this pipeline is if there is a lot of light or too little light then there will be issues in finding the edges in the image thus causing the pipeline to miss the lanes
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+A possible improvement to my pipelines would be to be able to accommodate for the change in perspective of the camera in order to standardize the line orientation.
