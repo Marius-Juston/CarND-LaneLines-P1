@@ -52,8 +52,6 @@ import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import numpy as np
 
-get_ipython().run_line_magic('matplotlib', 'inline')
-
 # ## Read in an Image
 
 # In[2]:
@@ -384,7 +382,6 @@ white_output = 'test_videos_output/solidWhiteRight.mp4'
 ##clip1 = VideoFileClip("test_videos/solidWhiteRight.mp4").subclip(0,5)
 clip1 = VideoFileClip("test_videos/solidWhiteRight.mp4")
 white_clip = clip1.fl_image(process_image)  # NOTE: this function expects color images!!
-get_ipython().run_line_magic('time', 'white_clip.write_videofile(white_output, audio=False)')
 
 # Play the video inline, or if you prefer find the video in your filesystem (should be in the same directory) and play it in your video player of choice.
 
@@ -416,7 +413,6 @@ yellow_output = 'test_videos_output/solidYellowLeft.mp4'
 ##clip2 = VideoFileClip('test_videos/solidYellowLeft.mp4').subclip(0,5)
 clip2 = VideoFileClip('test_videos/solidYellowLeft.mp4')
 yellow_clip = clip2.fl_image(process_image)
-get_ipython().run_line_magic('time', 'yellow_clip.write_videofile(yellow_output, audio=False)')
 
 # In[16]:
 
@@ -447,7 +443,6 @@ challenge_output = 'test_videos_output/challenge.mp4'
 # clip3 = VideoFileClip('test_videos/challenge.mp4').subclip(0,5)
 clip3 = VideoFileClip('test_videos/challenge.mp4')
 challenge_clip = clip3.fl_image(process_image)
-get_ipython().run_line_magic('time', 'challenge_clip.write_videofile(challenge_output, audio=False)')
 
 # In[18]:
 
